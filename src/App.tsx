@@ -1,7 +1,5 @@
-const App = () => {
-  const message = 'I am a header!!';
+import { Pickpoints } from './features/pickpoints/components';
 
-  return <h1>{message}</h1>;
-};
+const App = () => <Pickpoints />;
 
 export default App;
