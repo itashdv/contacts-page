@@ -1,7 +1,7 @@
 const App = () => {
-  return (
-    <h1>I am an App!!!</h1>
-  )
-}
+  const message = 'I am a header!!';
+
+  return <h1>{message}</h1>;
+};
 
 export default App;

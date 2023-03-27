@@ -1,5 +1,8 @@
+
+/* eslint-disable */
 const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
+const ESlintPlugin = require('eslint-webpack-plugin');
 
 module.exports = {
   mode: 'development',
@@ -37,6 +40,9 @@ module.exports = {
       title: 'Express Shina',
       filename: 'index.html',
       template: 'src/template.html',
-    })
+    }),
+    new ESlintPlugin({
+      extensions: ['js', 'ts', 'jsx', 'tsx']
+    }),
   ]
 };
