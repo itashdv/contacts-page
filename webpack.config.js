@@ -1,4 +1,3 @@
-
 /* eslint-disable */
 const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
@@ -29,20 +28,20 @@ module.exports = {
         test: /\.tsx?$/,
         use: 'ts-loader',
         exclude: /node_modules/,
-      }
-    ]
+      },
+    ],
   },
   resolve: {
-    extensions: ['.tsx', '.ts', '.js']
+    extensions: ['.tsx', '.ts', '.js'],
   },
   plugins: [
     new HtmlWebpackPlugin({
-      title: 'Express Shina',
+      title: 'Контакты',
       filename: 'index.html',
       template: 'src/template.html',
     }),
     new ESlintPlugin({
-      extensions: ['js', 'ts', 'jsx', 'tsx']
+      extensions: ['js', 'ts', 'jsx', 'tsx'],
     }),
-  ]
+  ],
 };
