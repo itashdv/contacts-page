@@ -5,3 +5,46 @@ body {
   font-size: 18px;
   color: red;
 }
+
+.app {
+  border: 1px solid red;
+  margin: 20px;
+}
+
+.pickpoints {
+  border: 1px solid blue;
+  display: flex;
+  main {
+    border: 1px solid red;
+    width: 50%;
+    ul {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+    }
+    li {
+      display: block;
+      margin: 0 10px;
+      border: 1px solid red;
+    }
+    a {
+      color: #333;
+      text-decoration: none;
+      font-weight: bold;
+      padding: 10px;
+      border: 1px solid red;
+      display: block;
+      span {
+        margin-right: 10px;
+      }
+    }
+    a:hover {
+      background-color: #333;
+      color: #fff;
+    }
+  }
+  aside {
+    border: 1px solid red;
+    width: 50%;
+  }
+}
