@@ -5,6 +5,7 @@ import {
   setPickpointsError,
 } from './state/actions';
 import { selectPickpointState } from './state/selectors';
+import { pickpointSaga } from './sagas';
 
 export {
   pickpointReducer,
@@ -12,4 +13,5 @@ export {
   setPickpoints,
   setPickpointsError,
   selectPickpointState,
+  pickpointSaga,
 };
