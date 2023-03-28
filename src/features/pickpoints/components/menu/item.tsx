@@ -1,18 +1,31 @@
+import { IPickPoint } from '../../../../types';
+import { useAppDispatch } from '../../../../store/hooks';
+import { setLocation } from '../../state/actions';
+
 type Props = {
-  address: string;
-  options: string[];
+  location: IPickPoint;
 };
 
-export const Item = ({ address, options }: Props) => {
-  const optionsText = options.join(' and ');
+export const Item = ({ location }: Props) => {
+  const dispatch = useAppDispatch();
+
+  const { address, budgets } = location;
+
+  const optionsText = budgets.join(' and ');
+
+  const onClick = (event: React.SyntheticEvent) => {
+    event.preventDefault();
+
+    dispatch(setLocation(location));
+  };
 
   return (
     <li>
-      <a href="#" aria-label={`${address}, ${optionsText}`}>
+      <a href="#" onClick={onClick} aria-label={`${address}, ${optionsText}`}>
         <h2>{address}</h2>
         <div>
-          {options.map(option => (
-            <span key={option}>{option}</span>
+          {budgets.map(budget => (
+            <span key={budget}>{budget}</span>
           ))}
         </div>
       </a>

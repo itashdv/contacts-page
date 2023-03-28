@@ -9,11 +9,21 @@ import {
   setPickpointsError,
 } from '../state/actions';
 
-const fetchPickpointsHelper = () => setTimeout(() => DATA, 1000);
+const fetchPickpointsHelper = (success: boolean, timeout: number) => {
+  return new Promise((resolve, reject) => {
+    setTimeout(() => {
+      if (success) {
+        resolve(DATA);
+      } else {
+        reject('Ошибка загрузки данных!');
+      }
+    }, timeout);
+  });
+};
 
 function* fetchPickpointListWorker(): unknown {
   try {
-    const response = yield call(fetchPickpointsHelper);
+    const response = yield call(fetchPickpointsHelper, true, 2000);
 
     const list: IPickPoint[] = response.pickPoints;
 
@@ -21,7 +31,7 @@ function* fetchPickpointListWorker(): unknown {
   } catch (error) {
     console.log(error);
 
-    yield put(setPickpointsError('Ошибка загрузки данных!'));
+    yield put(setPickpointsError(error));
   }
 }
 

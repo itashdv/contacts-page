@@ -14,3 +14,9 @@ export const setPickpointsError = (payload: string) => ({
   type: FETCH_FAILED,
   payload,
 });
+
+export const LOCATION_SET = 'PICKPOINTS/LOCATION_SET';
+export const setLocation = (payload: IPickPoint) => ({
+  type: LOCATION_SET,
+  payload,
+});
