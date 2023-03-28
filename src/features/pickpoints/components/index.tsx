@@ -11,7 +11,8 @@ import { Menu } from './menu';
 export const Pickpoints = () => {
   const dispatch = useAppDispatch();
 
-  const { pending, error } = useAppSelector(selectPickpointState);
+  const { pending, error, currentLocation } =
+    useAppSelector(selectPickpointState);
 
   useEffect(() => {
     dispatch(fetchPickpoints());
@@ -21,6 +22,8 @@ export const Pickpoints = () => {
 
   if (error) return <h2>{error}</h2>;
 
+  console.log('Pickpoints');
+
   return (
     <div className="pickpoints">
       <main>
@@ -29,7 +32,7 @@ export const Pickpoints = () => {
         </nav>
       </main>
       <aside aria-label="Map of pickpoints">
-        <MapComponent />
+        <MapComponent currentLocation={currentLocation} />
       </aside>
     </div>
   );

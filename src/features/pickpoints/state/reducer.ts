@@ -31,7 +31,7 @@ export const pickpointReducer = (state = initialState, action: AnyAction) => {
     case FETCH_SUCCEEDED: {
       const list: IPickPoint[] = action.payload;
 
-      return { ...state, list, currentLocation: list[0], pending: false };
+      return { ...state, list, pending: false };
     }
     case FETCH_FAILED: {
       const error: string = action.payload;
