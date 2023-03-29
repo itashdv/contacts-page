@@ -22,8 +22,6 @@ export const Pickpoints = () => {
 
   if (error) return <h2>{error}</h2>;
 
-  console.log('Pickpoints');
-
   return (
     <div className="pickpoints">
       <main>

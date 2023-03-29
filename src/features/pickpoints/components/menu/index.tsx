@@ -6,8 +6,6 @@ import { Item } from './item';
 export const Menu = () => {
   const { list } = useAppSelector(selectPickpointState);
 
-  console.log('Menu');
-
   return (
     <ul>
       {list.map(item => (

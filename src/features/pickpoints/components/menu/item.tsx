@@ -19,8 +19,6 @@ export const Item = ({ location }: Props) => {
     dispatch(setLocation(location));
   };
 
-  console.log('Menu item');
-
   return (
     <li>
       <a href="#" onClick={onClick} aria-label={`${address}, ${optionsText}`}>

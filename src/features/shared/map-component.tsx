@@ -1,10 +1,7 @@
 import { YMaps, Map, Placemark } from '@pbe/react-yandex-maps';
 
 import { IPickPoint } from '../../types';
-
-const DEFAULT_CENTER = [56.837631, 60.597622];
-const DEFAULT_ZOOM = 5;
-const LOCATION_ZOOM = 15;
+import { DEFAULT_CENTER, DEFAULT_ZOOM, LOCATION_ZOOM } from '../../constants';
 
 type Props = {
   currentLocation: IPickPoint | null;
@@ -22,8 +19,6 @@ export const MapComponent = ({ currentLocation }: Props) => {
         zoom: LOCATION_ZOOM,
       }
     : undefined;
-
-  console.log('Map component');
 
   return (
     <YMaps>
