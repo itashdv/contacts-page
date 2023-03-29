@@ -4,12 +4,10 @@ $layout-breakpoint-medium: 950px;
 
 body {
   font-family: Helvetica, sans-serif;
-  font-size: 18px;
-  color: red;
+  font-size: 16px;
 }
 
 .app {
-  border: 5px solid red;
   max-width: 1000px;
   margin: 20px auto 20px auto;
 }
@@ -19,14 +17,14 @@ body {
   grid-template-columns: repeat(auto-fit, minmax(360px, 500px));
   @media (max-width: 1010px) {
     display: block;
+    margin-left: 20px;
+    margin-right: 20px;
   }
-  // grid-template-rows: minmax(360px, 500px);
-  // grid-auto-flow: column;
   main {
-    border: 3px solid blue;
     nav {
       height: 500px;
       overflow: auto;
+      background-color: #5a5a5a;
     }
     ul {
       list-style: none;
@@ -35,8 +33,7 @@ body {
     }
     li {
       display: block;
-      margin: 0 10px;
-      border: 1px solid red;
+      margin: 10px;
     }
     a {
       color: #333;
@@ -44,17 +41,23 @@ body {
       font-weight: bold;
       padding: 10px;
       display: block;
+      background-color: #ffffff;
+      h2 {
+        margin: 6px 0;
+      }
+      div {
+        margin-top: 12px;
+      }
       span {
         margin-right: 10px;
+        padding: 4px 8px;
+        border-radius: 3px;
+        color: #ffffff;
+        background-color: #5a5a5a;
       }
-    }
-    a:hover {
-      background-color: #333;
-      color: #fff;
     }
   }
   aside {
-    border: 3px solid yellow;
     width: 100%;
     height: auto;
   }

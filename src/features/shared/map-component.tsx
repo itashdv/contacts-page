@@ -1,7 +1,7 @@
 import { YMaps, Map, Placemark } from '@pbe/react-yandex-maps';
 
-import { IPickPoint } from '../../types';
 import { DEFAULT_CENTER, DEFAULT_ZOOM, LOCATION_ZOOM } from '../../constants';
+import { IPickPoint } from '../../types';
 
 type Props = {
   currentLocation: IPickPoint | null;

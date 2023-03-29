@@ -1,6 +1,7 @@
 import { IPickPoint } from '../../../../types';
 import { useAppDispatch } from '../../../../store/hooks';
 import { setLocation } from '../../state/actions';
+import { Budget } from '../../../shared';
 
 type Props = {
   location: IPickPoint;
@@ -25,7 +26,7 @@ export const Item = ({ location }: Props) => {
         <h2>{address}</h2>
         <div>
           {budgets.map(budget => (
-            <span key={budget}>{budget}</span>
+            <Budget key={budget} text={budget} />
           ))}
         </div>
       </a>
