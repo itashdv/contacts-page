@@ -26,8 +26,8 @@ export const pickpointReducer = (state = initialState, action: AnyAction) => {
   switch (action.type) {
     case FETCH_REQUESTED:
       return { ...state, error: '', pending: true };
-    // TODO: limit the scope of the variable to this specific case
-    // by wrapping them in block
+    // Ограничиваем области переменных к конкретному кейсу,
+    // обворачивая их в блоки
     case FETCH_SUCCEEDED: {
       const list: IPickPoint[] = action.payload;
 

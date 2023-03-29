@@ -12,6 +12,7 @@ export const Item = ({ location }: Props) => {
 
   const { address, budgets } = location;
 
+  // Стараемся формировать внятный текст для скрин ридеров
   const optionsText = budgets.join(' and ');
 
   const onClick = (event: React.SyntheticEvent) => {

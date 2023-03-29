@@ -15,6 +15,8 @@ export const store = configureStore({
 
 sagaMiddleware.run(rootSaga);
 
+// Типизируем один раз и импортируем там где надо
+// чтобы не повторяться
 export type RootState = ReturnType<typeof store.getState>;
 
 export type AppDispatch = typeof store.dispatch;

@@ -4,7 +4,7 @@ import { useAppDispatch, useAppSelector } from '../../../store/hooks';
 import { fetchPickpoints } from '../state/actions';
 import { selectPickpointState } from '../state/selectors';
 
-import { MapComponent } from '../../shared';
+import { MapComponent, Loader } from '../../shared';
 
 import { Menu } from './menu';
 
@@ -18,7 +18,7 @@ export const Pickpoints = () => {
     dispatch(fetchPickpoints());
   }, []);
 
-  if (pending) return <h2>Loading..</h2>;
+  if (pending) return <Loader />;
 
   if (error) return <h2>{error}</h2>;
 

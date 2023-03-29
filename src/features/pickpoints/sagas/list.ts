@@ -9,12 +9,15 @@ import {
   setPickpointsError,
 } from '../state/actions';
 
+// Делаем мокап для запроса на API для обоих случаев: success и fail
 const fetchPickpointsHelper = (success: boolean, timeout: number) => {
   return new Promise((resolve, reject) => {
     setTimeout(() => {
       if (success) {
         resolve(DATA);
       } else {
+        // Желательно создать что-то типа enum-а со списком
+        // всевозможных ошибок
         reject('Ошибка загрузки данных!');
       }
     }, timeout);

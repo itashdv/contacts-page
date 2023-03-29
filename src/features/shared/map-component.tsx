@@ -20,6 +20,8 @@ export const MapComponent = ({ currentLocation }: Props) => {
       }
     : undefined;
 
+  // Желательно провайдер YMaps нужно поставить выше
+  // всех возможных компонентов, которые будут использовать карты
   return (
     <YMaps>
       <Map
