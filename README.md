@@ -25,4 +25,4 @@ Redux-Saga. \
 
 ## Ссылка
 
-Данный проект можно посмотреть на [Github](https://github.com/itashdv/express-shina).
+Данный проект можно посмотреть на [Github](https://github.com/itashdv/contacts-page).
